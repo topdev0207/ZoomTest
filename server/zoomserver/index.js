@@ -138,7 +138,7 @@ app.get('/', (req, res) => {
 
     // Step 2:
     // If no authorization code is available, redirect to Zoom OAuth to authorize
-    res.redirect('https://zoom.us/oauth/authorize?response_type=code&client_id=' + process.env.clientID + '&redirect_uri=' + process.env.redirectURL)
+    res.redirect('https://zoom.us/oauth/authorize?response_type=code&client_id=' + process.env.REACT_APP_CLIENT_ID + '&redirect_uri=' + process.env.REACT_APP_REDIRECT_URL)
   })
 
 
