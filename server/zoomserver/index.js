@@ -138,7 +138,7 @@ app.get('/', (req, res) => {
 
     // Step 2:
     // If no authorization code is available, redirect to Zoom OAuth to authorize
-    res.redirect('https://zoom.us/oauth/authorize?response_type=code&client_id=vw5sSJryRey9d1QUqWrzYw&redirect_uri=https://b56f-203-222-134-3.au.ngrok.io')
+    res.redirect('https://zoom.us/oauth/authorize?response_type=code&client_id=' + process.env.clientID + '&redirect_uri=' + process.env.redirectURL)
   })
 
 
