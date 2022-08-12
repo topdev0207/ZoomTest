@@ -37,7 +37,7 @@ function Admin() {
         // call auth API
         try {
           console.log("Calling auth API")
-          await axios.get('https://7e64-14-203-92-224.au.ngrok.io', meetingData)
+          await axios.get('http://localhost:3008', meetingData)
           .then((response) => {
               console.log("Hurray, this works");
 
