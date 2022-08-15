@@ -18,9 +18,8 @@ function Admin() {
 
       // get meeting data from form
       const meetingData = {
-        topic: inputs.title,
-        password: inputs.password,
-        schedule_for: "ricamaeaverion22@gmail.com",     // TODO: get email of tutor (must be added to TechConnect Zoom account)
+        //password: inputs.password,
+        topic: "Virtual lesson with student " + inputs.student + " and tutor " + inputs.tutor,
         start_time: inputs.dateTime,
       }
 
@@ -67,22 +66,14 @@ function Admin() {
                 <option value="tutor 1">Tutor 1</option>
                 <option value="tutor 2">Tutor 2</option>
             </select>
-            <label>Meeting title</label>
-            <input
-                type='text'
-                name="title"
-                value={inputs.title || ""}
-                onChange={handleChange}
-                required
-            />
-            <label>Meeting password</label>
+            {/* <label>Meeting password</label>
             <input
                 type='text'
                 name="password"
                 value={inputs.password || ""}
                 onChange={handleChange}
                 required
-            />
+            /> */}
             <label>Date and time</label>
             <input
                 type="datetime-local"
